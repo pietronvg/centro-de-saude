@@ -1,63 +1,334 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>centrodesaude</title>
-    <link rel="stylesheet" href="style 1.css">
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Centro de Saúde Bauru</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
+
+    <!-- Pular para conteúdo -->
+
+    <a
+        href="#conteudo"
+        class="skip-link">
+
+        Pular para o conteúdo principal
+
+    </a>
+
+    <!-- Região para leitores de tela -->
+
+    <div
+        id="avisos"
+        aria-live="polite"
+        class="sr-only">
+
+    </div>
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#vacinas">Vacinas Disponíveis</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <p>CENTRO DE SAUDE BAURU</p>
-                <img src="./logohospital-removebg-preview (1).png" alt="">
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <div class="conteudo">
-                <h1>Cuide da sua Saúde e de Quem Você Ama!</h1>
-                <p>Participe da nossa Campanha de Vacinação e proteja-se contra diversas doenças.</p>
-                <button id="botao">
-                     AGENDAR
-                </button>
+
+        <nav
+            aria-label="Menu principal">
+
+            <div class="logo">
+
+                <a href="index.html">
+
+                    <img
+                        src="./logohospital-removebg-preview (1).png"
+                        alt="Logo do Centro de Saúde Bauru">
+
+                </a>
+
+                <div>
+
+                    <h1>
+
+                        Centro de Saúde Bauru
+
+                    </h1>
+
+                    <p>
+
+                        Campanha de Vacinação
+
+                    </p>
+
+                </div>
+
             </div>
-        </section>
-        <script>
-            document.getElementById("botao").onclick = function() {
-                window.location.href = "paginadeformulario.html";
-            };
-        </script>
-        
 
-        <section id="vacinas">
-            <h1>Vacinas Disponíveis:</h1>
             <ul>
-                <li>Vacina contra a Gripe (Influenza)</li>
-                <li>Vacina contra a COVID-19</li>
-                <li>Vacina contra Hepatite B</li>
-                <li>Vacina contra Febre Amarela</li>
-                <li>Vacina contra Sarampo</li>
+
+                <li>
+
+                    <a href="#home">
+
+                        Início
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="#vacinas">
+
+                        Vacinas
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="#contato">
+
+                        Contato
+
+                    </a>
+
+                </li>
+
             </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- Painel -->
+
+    <aside
+        id="painel">
+
+        <h2>
+
+            Acessibilidade
+
+        </h2>
+
+        <button id="btnFonteMais">
+
+            A+
+
+        </button>
+
+        <button id="btnFonteMenos">
+
+            A-
+
+        </button>
+
+        <button id="btnContraste">
+
+            Alto Contraste
+
+        </button>
+
+        <button id="btnBaixaVisao">
+
+            Baixa Visão
+
+        </button>
+
+        <button id="btnLerPagina">
+
+            🔊 Ler Página
+
+        </button>
+
+        <button id="btnParar">
+
+            ⏹ Parar Leitura
+
+        </button>
+
+        <button id="btnMicrofone">
+
+            🎤 Comando de Voz
+
+        </button>
+
+    </aside>
+
+    <main id="conteudo">
+
+        <section
+            id="home">
+
+            <h2>
+
+                Cuide da sua saúde.
+
+            </h2>
+
+            <p>
+
+                Agende sua vacinação de maneira rápida e acessível.
+
+            </p>
+
+            <button
+                id="botaoAgendar"
+                aria-describedby="descricaoBotao">
+
+                Agendar vacinação
+
+            </button>
+
+            <p
+                id="descricaoBotao"
+                class="sr-only">
+
+                Abre o formulário para realizar um novo agendamento.
+
+            </p>
+
         </section>
 
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Para mais informações, entre em contato conosco:</p>
-            <p>Telefone: (11) 1234-5678 </p>
-            <p>E-mail: contato@centrodesaude.com</p>
+        <section
+            id="vacinas">
+
+            <h2>
+
+                Vacinas disponíveis
+
+            </h2>
+
+            <article>
+
+                <h3>
+
+                    COVID-19
+
+                </h3>
+
+                <p>
+
+                    Indicada conforme calendário do Ministério da Saúde.
+
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>
+
+                    Influenza
+
+                </h3>
+
+                <p>
+
+                    Recomendável anualmente.
+
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>
+
+                    Hepatite B
+
+                </h3>
+
+                <p>
+
+                    Proteção contra infecção pelo vírus da hepatite B.
+
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>
+
+                    Febre Amarela
+
+                </h3>
+
+                <p>
+
+                    Indicada para áreas de risco.
+
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>
+
+                    Sarampo
+
+                </h3>
+
+                <p>
+
+                    Vacina tríplice viral.
+
+                </p>
+
+            </article>
+
         </section>
+
+        <section
+            id="contato">
+
+            <h2>
+
+                Contato
+
+            </h2>
+
+            <address>
+
+                <p>
+
+                    📞 (11) 1234-5678
+
+                </p>
+
+                <p>
+
+                    ✉ contato@centrodesaude.com
+
+                </p>
+
+            </address>
+
+        </section>
+
     </main>
+
     <footer>
-        <p>&copy; 2024 Centro de Saude. Todos os direitos reservados.</p>
+
+        <p>
+
+            © 2026 Centro de Saúde Bauru
+
+        </p>
+
     </footer>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
